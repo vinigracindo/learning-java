@@ -1,8 +1,52 @@
+import entities.Employee;
+import entities.Rectangle;
+
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        Employee employee = new Employee();
+        System.out.println("Enter employee name: ");
+        employee.name = sc.nextLine();
+        System.out.println("Enter employee gross salary: ");
+        employee.grossSalary = sc.nextDouble();
+        System.out.println("Enter employee tax: ");
+        employee.tax = sc.nextDouble();
+
+        System.out.println(employee);
+
+        System.out.println("Enter the percentage of increase salary: ");
+
+        double percentage = sc.nextDouble();
+        employee.increaseSalary(percentage);
+
+        System.out.println("Updated salary: " + employee);
+
+        sc.close();
+    }
+    public static void main3(String[] args) {
+        Locale.setDefault(Locale.US);
+
+        Rectangle rectangle = new Rectangle();
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter rectangle width and height: ");
+        rectangle.width = sc.nextDouble();
+        rectangle.height = sc.nextDouble();
+
+        System.out.println("Area: " + rectangle.Area());
+        System.out.println("Perimeter: " + rectangle.Perimeter());
+        System.out.println("Diagonal: " + rectangle.Diagonal());
+
+        sc.close();
+    }
+    public static void main2(String[] args) {
 
         // Olá mundo
         System.out.println("Hello World!!!");
