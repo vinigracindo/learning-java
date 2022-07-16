@@ -10,13 +10,14 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Employee employee = new Employee();
         System.out.println("Enter employee name: ");
-        employee.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.println("Enter employee gross salary: ");
-        employee.grossSalary = sc.nextDouble();
+        double grossSalary = sc.nextDouble();
         System.out.println("Enter employee tax: ");
-        employee.tax = sc.nextDouble();
+        double tax = sc.nextDouble();
+
+        Employee employee = new Employee(name, grossSalary, tax);
 
         System.out.println(employee);
 
@@ -32,13 +33,13 @@ public class Main {
     public static void main3(String[] args) {
         Locale.setDefault(Locale.US);
 
-        Rectangle rectangle = new Rectangle();
-
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter rectangle width and height: ");
-        rectangle.width = sc.nextDouble();
-        rectangle.height = sc.nextDouble();
+        double width = sc.nextDouble();
+        double height = sc.nextDouble();
+
+        Rectangle rectangle = new Rectangle(width, height);
 
         System.out.println("Area: " + rectangle.Area());
         System.out.println("Perimeter: " + rectangle.Perimeter());
