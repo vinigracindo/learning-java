@@ -1,12 +1,21 @@
 import entities.Employee;
 import entities.Rectangle;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+    }
+
+    public static void main4(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
